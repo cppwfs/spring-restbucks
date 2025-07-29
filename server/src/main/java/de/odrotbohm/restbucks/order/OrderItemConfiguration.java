@@ -13,10 +13,12 @@ import org.springframework.context.annotation.Configuration;
 public class OrderItemConfiguration {
 
 	public static final String ORDER_ITEM = "orderitems";
+	public static final String ORDER_QUEUE= "orderqueue";
+
 
 	@Bean
 	public Binding orderItemBinding(Queue queue, Exchange exchange) {
-		return BindingBuilder.bind(queue).to(exchange).with(ORDER_ITEM).noargs();
+		return BindingBuilder.bind(queue).to(exchange).with("").noargs();
 	}
 
 	@Bean
