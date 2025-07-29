@@ -33,7 +33,7 @@ import org.junit.jupiter.api.Test;
  */
 class CreditCardUnitTest {
 
-	static final CreditCardNumber NUMBER = CreditCardNumber.of("1234123412341234");
+	static final CreditCardNumber NUMBER = CreditCardNumber.of("1234");
 
 	@Test
 	void discoversExpiredCreditCard() {

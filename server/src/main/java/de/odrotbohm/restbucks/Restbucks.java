@@ -15,6 +15,11 @@
  */
 package de.odrotbohm.restbucks;
 
+import org.springframework.amqp.core.AmqpAdmin;
+import org.springframework.amqp.core.BindingBuilder;
+import org.springframework.amqp.core.ExchangeBuilder;
+import org.springframework.amqp.core.QueueBuilder;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
@@ -54,4 +59,7 @@ public class Restbucks {
 	public static void main(String[] args) {
 		SpringApplication.run(Restbucks.class, args);
 	}
+
+	private final String Q = "coffee";
+
 }

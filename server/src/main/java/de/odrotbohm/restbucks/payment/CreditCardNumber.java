@@ -30,7 +30,7 @@ import org.jmolecules.ddd.types.ValueObject;
 @Value(staticConstructor = "of")
 public class CreditCardNumber implements Identifier, ValueObject {
 
-	public static final String REGEX = "[0-9]{16}";
+	public static final String REGEX = "[0-9]{4}";
 	private static final Pattern PATTERN = Pattern.compile(REGEX);
 
 	private final String number;

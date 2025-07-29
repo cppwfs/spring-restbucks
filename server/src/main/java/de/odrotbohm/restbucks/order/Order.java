@@ -35,6 +35,7 @@ import javax.money.MonetaryAmount;
 import org.javamoney.moneta.Money;
 import org.jmolecules.ddd.types.AggregateRoot;
 import org.jmolecules.ddd.types.Identifier;
+import org.jmolecules.event.annotation.Externalized;
 import org.jmolecules.event.types.DomainEvent;
 import org.springframework.data.domain.AbstractAggregateRoot;
 
@@ -236,6 +237,7 @@ public class Order extends AbstractAggregateRoot<Order> implements AggregateRoot
 	 * @author Oliver Gierke
 	 * @author Stéphane Nicoll
 	 */
+	@Externalized(target = OrderItemConfiguration.ORDER_ITEM)
 	public record OrderPaid(
 			OrderIdentifier orderIdentifier,
 			MonetaryAmount total) implements DomainEvent {}

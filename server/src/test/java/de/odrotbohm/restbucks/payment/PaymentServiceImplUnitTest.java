@@ -41,7 +41,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 @ExtendWith(MockitoExtension.class)
 class PaymentServiceImplUnitTest {
 
-	static final CreditCardNumber NUMBER = CreditCardNumber.of("1234123412341234");
+	static final CreditCardNumber NUMBER = CreditCardNumber.of("1234");
 
 	PaymentService paymentService;
 

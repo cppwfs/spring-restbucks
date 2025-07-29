@@ -32,7 +32,7 @@ class CreditCardNumberUnitTest {
 	void rejectsInvalidLength() {
 
 		assertThatExceptionOfType(IllegalArgumentException.class) //
-				.isThrownBy(() -> CreditCardNumber.of("1234"));
+				.isThrownBy(() -> CreditCardNumber.of("12345"));
 	}
 
 	@Test
@@ -44,6 +44,6 @@ class CreditCardNumberUnitTest {
 
 	@Test
 	void createsValidCreditCardNumber() {
-		assertThatNoException().isThrownBy(() -> CreditCardNumber.of("1234123412341234"));
+		assertThatNoException().isThrownBy(() -> CreditCardNumber.of("1234"));
 	}
 }

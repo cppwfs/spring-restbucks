@@ -50,7 +50,7 @@ class CreditCardsIntegrationTest extends AbstractIntegrationTest {
 	}
 
 	public static CreditCardNumber createCreditCardNumber() {
-		return CreditCardNumber.of("4321432143214321");
+		return CreditCardNumber.of("4321");
 	}
 
 	public static CreditCard createCreditCard() {

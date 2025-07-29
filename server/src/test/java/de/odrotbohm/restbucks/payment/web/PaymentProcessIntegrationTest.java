@@ -272,7 +272,7 @@ class PaymentProcessIntegrationTest extends AbstractWebIntegrationTest {
 		LOG.info("Triggering payment…");
 
 		var action = mvc.perform(put(paymentLink.getHref())//
-				.content("{ \"number\" : \"1234123412341234\" }")//
+				.content("{ \"number\" : \"1234\" }")//
 				.contentType(MediaType.APPLICATION_JSON)//
 				.accept(MediaTypes.HAL_JSON));
 

@@ -37,7 +37,7 @@ class PaymentInitializer {
 			return;
 		}
 
-		CreditCardNumber number = CreditCardNumber.of("1234123412341234");
+		CreditCardNumber number = CreditCardNumber.of("1234");
 		CreditCard creditCard = new CreditCard(number, "Oliver Gierke", Month.DECEMBER, Year.of(2099));
 
 		creditCard = creditCards.save(creditCard);
