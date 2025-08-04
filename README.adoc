@@ -36,7 +36,7 @@ java -jar restbucks/target/*.jar
 ==== #2 Restbucksgateway
 [source,shell]
 ----
-java -jar restbucksgateway/target/restbucksgateway-0.0.1-SNAPSHOT.jar --uri=http://localhost:9494
+java -jar restbucksgateway/target/restbucksgateway-0.0.1-SNAPSHOT.jar --url=http://localhost:9494
 ----
 
 ==== #3 Dashboard
