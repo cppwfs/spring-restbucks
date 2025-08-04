@@ -1,0 +1,46 @@
+= Micro Restbucks
+
+This is a sample project that demonstrates how a module can be extracted from a modulith and then create a new microservice from that module.
+The main branch of this project contains the:
+
+* *restbucks:* project module which is based on the original link:https://github.com/odrotbohm/spring-restbucks[restbucks] project provided by Oliver Drotbohm.  In this branch the dashboard(statisics) module has been removed from the project.  And purchase events out to a RabbitMQ exchange via AMQP.
+* *restbucksgateway:* project module which routes all requests for the statistics endpoint to the dashboard microservice.
+* *dashboard:* project receives purchase events via a queue on a RabbitMQ instance and then statistics are being calculated using the information.
+
+NOTE: The `modulith-only` branch does not include the dashboard microservice and the dashboard module is still in the `restbucks` app.
+
+== Building apps
+
+=== Requirements:
+
+* Java 17 or Above
+
+=== Build:
+
+[source,shell]
+----
+mvn clean package
+----
+
+=== Run the apps:
+
+Run the following apps in order.
+
+
+==== #1 Restbucks
+[source,shell]
+----
+java -jar restbucks/target/*.jar
+----
+
+==== #2 Restbucksgateway
+[source,shell]
+----
+java -jar restbucksgateway/target/restbucksgateway-0.0.1-SNAPSHOT.jar --uri=http://localhost:9494
+----
+
+==== #3 Dashboard
+[source,shell]
+----
+java -jar dashboard/target/dashboard-0.0.1-SNAPSHOT.jar
+----
