@@ -14,7 +14,6 @@
 
     <modules>
         <module>restbucks</module>
-        <module>dashboard</module>
         <module>restbucksgateway</module>
     </modules>
 
